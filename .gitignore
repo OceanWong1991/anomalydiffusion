@@ -1,0 +1,8 @@
+logs/
+*.pyc
+
+
+
+do/
+models/ldm/text2img-large/
+

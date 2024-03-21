@@ -112,6 +112,7 @@ class EmbeddingManager(nn.Module):
             **kwargs
     ):
         img=cond_img
+        # img=cond_img.convert("RGB")
         b, n, device = *tokenized_text.shape, tokenized_text.device
         # if img is not None:
         #     from torchvision.utils import save_image

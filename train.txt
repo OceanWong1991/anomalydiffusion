@@ -1,0 +1,8 @@
+pip install taming-transformers-rom1504
+
+pip install Pillow==9.5.0
+
+
+CUDA_VISIBLE_DEVICES=0,1 python main.py --spatial_encoder_embedding --data_enhance --base configs/latent-diffusion/txt2img-1p4B-finetune-encoder+embedding.yaml -t --actual_resume /home/ai/projects/anomalydiffusion/models/ldm/text2img-large/model.ckpt -n test --gpus 0,1 --init_word anomaly  --mvtec_path=/home/ai/projects_zjy/DiAD/training/MVTec-AD/mvtec_anomaly_detection
+
+/home/ai/projects_zjy/DiAD/training/MVTec-AD/mvtec_anomaly_detection
