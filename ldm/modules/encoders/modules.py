@@ -78,7 +78,7 @@ class BERTTokenizer(AbstractEncoder):
         from transformers import BertTokenizerFast  # TODO: add to reuquirements
         # self.tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
         # self.tokenizer = BertTokenizerFast.from_pretrained("/home/ai/projects/anomalydiffusion/do/bert-base-uncased.onnx")
-        self.tokenizer = BertTokenizerFast.from_pretrained("/home/ai/projects/anomalydiffusion/do/")
+        self.tokenizer = BertTokenizerFast.from_pretrained("/home/glint/xzwang/code/anomalydiffusion/hugface_models/bert-base-uncased")
         self.device = device
         self.vq_interface = vq_interface
         self.max_length = max_length

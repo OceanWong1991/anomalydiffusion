@@ -3,6 +3,24 @@ pip install taming-transformers-rom1504
 pip install Pillow==9.5.0
 
 
-CUDA_VISIBLE_DEVICES=0,1 python main.py --spatial_encoder_embedding --data_enhance --base configs/latent-diffusion/txt2img-1p4B-finetune-encoder+embedding.yaml -t --actual_resume /home/ai/projects/anomalydiffusion/models/ldm/text2img-large/model.ckpt -n test --gpus 0,1 --init_word anomaly  --mvtec_path=/home/ai/projects_zjy/DiAD/training/MVTec-AD/mvtec_anomaly_detection
+CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --spatial_encoder_embedding --data_enhance --base configs/latent-diffusion/txt2img-1p4B-finetune-encoder+embedding.yaml -t --actual_resume /home/glint/xzwang/code/anomalydiffusion/models/ldm/text2img-large/model.ckpt -n test --gpus 0,1,2,3 --init_word anomaly  --mvtec_path=/home/glint/data/mvte
 
 /home/ai/projects_zjy/DiAD/training/MVTec-AD/mvtec_anomaly_detection
+
+
+export LD_LIBRARY_PATH={libcublasLt.so.11所在路径}:$LD_LIBRARY_PATH
+
+/home/glint/miniconda3/envs/ad/lib/python3.8/site-packages/torch/lib/
+/home/glint/miniconda3/envs/ad/lib/python3.8/site-packages/torch/lib/
+
+
+
+export LD_LIBRARY_PATH="/home/glint/miniconda3/envs/ad/lib/python3.8/site-packages/torch/lib/":$LD_LIBRART_PATH
+export LD_LIBRARY_PATH=/home/glint/miniconda3/envs/ad/lib/python3.8/site-packages/torch/lib/:$LD_LIBRARY_PATH
+
+
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 python main.py --spatial_encoder_embedding --data_enhance --base configs/latent-diffusion/txt2img-1p4B-finetune-encoder+embedding.yaml -t --actual_resume /home/glint/xzwang/code/anomalydiffusion/models/ldm/text2img-large/model.ckpt -n test --gpus 0,1,2,3 --init_word anomaly  --mvtec_path=/home/glint/data/mvte
+
+CUDA_VISIBLE_DEVICES=2,3 python main.py --spatial_encoder_embedding --data_enhance --base configs/latent-diffusion/txt2img-1p4B-finetune-encoder+embedding.yaml -t --actual_resume /home/glint/xzwang/code/anomalydiffusion/models/ldm/text2img-large/model.ckpt -n test --gpus 2,3 --init_word anomaly  --mvtec_path=/home/glint/data/mvte
+
